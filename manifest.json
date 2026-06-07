@@ -1,0 +1,25 @@
+{
+  "name": "Croak",
+  "short_name": "Croak",
+  "description": "Čistý prostor pro diskuze bez algoritmů a reklam",
+  "start_url": "/network.html",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#1a1c1a",
+  "background_color": "#1a1c1a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

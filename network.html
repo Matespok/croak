@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Croak | Čistý prostor pro diskuze</title>
+    
+    <meta name="theme-color" content="#1a1c1a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Croak" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body class="body-bg">
+
+    <div class="offline-badge" id="offlineBadge">offline režim — některá data nemusí být dostupná</div>
+
+    <div class="menu-overlay" id="menuOverlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="flex justify-between items-center mb-8 pb-4 border-b border-white/10">
+            <div class="text-xl font-light tracking-tighter text-white">Croak<span class="text-gray-500">.</span></div>
+            <button onclick="closeMobileMenu()" class="text-gray-400 text-2xl">&times;</button>
+        </div>
+        <div id="mobile-menu-nav" class="flex flex-col gap-4"></div>
+    </div>
+
+    <div class="install-toast" id="installToast">Nainstalovat Croak do telefonu</div>
+
+    <div class="relative min-h-screen">
+        <aside class="sidebar fixed left-0 top-0 bottom-0 w-64 flex flex-col py-6 px-3 z-30 hidden md:flex">
+            <div class="px-4 mb-8 cursor-pointer" onclick="router.navigate('home')">
+                <div class="text-2xl font-light tracking-tighter text-white">Croak<span class="text-gray-500">.</span></div>
+                <p class="text-[9px] text-gray-500 tracking-[0.2em] mt-1 uppercase">čistý prostor</p>
+            </div>
+            <nav class="flex flex-col gap-0 flex-grow" id="desktop-nav"></nav>
+        </aside>
+
+        <main class="md:pl-64 flex justify-center min-h-screen">
+            <div class="feed-container w-full max-w-2xl min-h-screen shadow-sm">
+                <header class="md:hidden flex justify-between items-center px-4 py-3 border-b border-[#e6e2da] sticky top-0 bg-[#f5f3ef]/95 backdrop-blur-sm z-40">
+                    <div class="text-lg font-light tracking-tighter cursor-pointer" onclick="router.navigate('home')">Croak<span class="text-gray-400">.</span></div>
+                    <button onclick="openMobileMenu()" class="text-gray-600">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                    </button>
+                </header>
+
+                <div id="app"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

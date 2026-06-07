@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Croak — Prostor pro čisté myšlenky</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #1a1c1a;
+            color: #2c2c2a;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .serif-text {
+            font-family: 'Merriweather', serif;
+        }
+
+        .title-font {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        /* Jemné přírodní pozadí */
+        .hero-bg {
+            background-image: linear-gradient(0deg, rgba(20, 22, 18, 0.88) 0%, rgba(20, 22, 18, 0.75) 100%),
+                              url('https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center 25%;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* Karta ve stylu feedu – krémová, ne bílá */
+        .studio-card {
+            background: #f5f3ef;
+            color: #2c2c2a;
+            border-radius: 0px;
+            box-shadow: none;
+            border: none;
+        }
+
+        .btn-studio {
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            padding: 14px 28px;
+            border-radius: 0px;
+            transition: all 0.2s ease;
+            background-color: #2c2c2a;
+            color: #f5f3ef;
+            border: none;
+        }
+
+        .btn-studio:hover {
+            background-color: #40403d;
+        }
+
+        /* Linky a detaily */
+        .border-subtle {
+            border-color: rgba(255,255,240,0.12);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col justify-between hero-bg">
+
+    <header class="max-w-5xl w-full mx-auto px-6 py-8 flex justify-between items-center relative z-10">
+        <div class="text-xl font-light tracking-tighter text-white">Croak<span class="text-gray-500">.</span></div>
+        <button onclick="window.location.href='network.html'" class="text-[10px] uppercase tracking-[0.2em] font-light opacity-70 hover:opacity-100 transition-opacity border-b border-white/30 pb-1 text-white">
+            Vstoupit do sítě →
+        </button>
+    </header>
+
+    <main class="max-w-5xl w-full mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center my-auto relative z-10 py-12">
+        
+        <div class="lg:col-span-7 space-y-5 text-left">
+            <h1 class="title-font text-5xl md:text-7xl font-bold tracking-tight leading-[1.1] text-white">
+                Zpátky k <br class="hidden md:inline">
+                <span class="font-light text-gray-300">textu</span>.
+            </h1>
+            <p class="serif-text text-lg md:text-xl text-gray-300 font-light leading-relaxed max-w-xl">
+                Platforma pro lidi, které unavuje vizuální smog a nekonečný algoritmický šum moderních sociálních sítí.
+            </p>
+        </div>
+
+        <div class="lg:col-span-5 pt-8 lg:pt-0">
+            <div class="studio-card p-8 md:p-10 space-y-5 max-w-md ml-auto">
+                <div class="text-[10px] font-medium uppercase tracking-[0.2em] text-gray-500">Manifest platformy</div>
+                <h2 class="text-xl font-medium uppercase tracking-tight leading-tight text-gray-800">Žádný balast. Jen čisté diskuze.</h2>
+                <p class="serif-text text-sm text-gray-600 leading-relaxed">
+                    Croak, postaven na TOAD API, vrací internetovou konverzaci tam, kde byla nejlepší. Do přehledných, chronologicky řazených vláken, kde má váhu každé slovo. Sdílejte nápady, reagujte na komunitu a budujte svůj profil.
+                </p>
+                <div class="pt-3">
+                    <button onclick="window.location.href='network.html'" class="btn-studio w-full text-center block">
+                        Spustit aplikaci
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="w-full text-center py-6 text-[9px] font-light uppercase tracking-[0.2em] border-t border-white/10 relative z-10 mt-12 bg-black/20 backdrop-blur-sm">
+        <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 px-6">
+            <div class="opacity-50 text-white">
+                Built with <3 & caffeine by matespok
+            </div>
+            <div class="flex flex-wrap justify-center gap-x-6 gap-y-1 text-gray-400">
+                <a href="https://matespok.serveousercontent.com/swagger" class="hover:text-white transition-colors">API (REST)</a>
+                <a href="https://matespok.serveousercontent.com" class="hover:text-white transition-colors">Původní projekt</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
