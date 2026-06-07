@@ -24,7 +24,8 @@ Projekt webové aplikace s dynamickým obsahem v JavaScriptu, postavený jako **
 * **`style.css`**: Kombinuje výhody Tailwind CSS s vlastními doplňky. Definuje tmavé přírodní pozadí s texturou, zakázkové animace (např. vysunutí toast notifikace) a kompletní responzivní chování (skrytí sidebaru na mobilech, spodní navigace).
 * **`script.js`**: Srdce aplikace zajišťující asynchronní operace, obsluhu událostí a klientský routing.
 * **`sw.js` & `manifest.json`**: Technologické pilíře PWA. Manifest definuje chování po instalaci na plochu (standalone režim, barva lišty `#1a1c1a`), Service Worker implementuje strategii Cache-First pro statické assety.
-
+* Struktura ukládání dat
+![struktura dat](TOADDB.png)
 ---
 
 ## 2. Seznam API Endpointů
@@ -35,6 +36,7 @@ Aplikace komunikuje s vlastním produkčním REST API běžícím na adrese:
 
 Kompletní technická dokumentace, schémata a možnost testování jednotlivých požadavků se nachází v rozhraní Swaggeru, veškerá dokumentace API na odkaze: `https://matespok.serveousercontent.com/swagger`
 
+![Swagger](Swagger.png)
 ---
 
 ## 3. Principy fungování aplikace
